@@ -4,7 +4,10 @@ Ruijie Wang, Zhiruo Zhang, Luca Rossetto, Florian Ruosch, and Abraham Bernstein
 
 :trophy: Winner of the [DBLP_QuAD KGQA Task - Scholarly QALD Challenge](https://kgqa.github.io/scholarly-QALD-challenge/2023/) at [The 22nd International Semantic Web Conference (ISWC 2023)](https://iswc2023.semanticweb.org/).
 
-:boom: Based on NLQxform, we also developed and open-sourced [NLQxform-UI](https://arxiv.org/abs/2403.08475) --- a web-based interactive QA system over [DBLP Knowledge Graph](https://blog.dblp.org/tag/knowledge-graph/).
+:boom: Based on NLQxform, we developed [NLQxform-UI](https://arxiv.org/abs/2403.08475) &mdash; an easy-to-use web-based interactive QA system over [DBLP Knowledge Graph](https://blog.dblp.org/tag/knowledge-graph/), which is also [open-sourced](https://github.com/ruijie-wang-uzh/NLQxform-UI).
+
+:exclamation: Please note that the SSL certificate verification is disabled in `do_query.py` and `generator_main.py` due to the `SSL: CERTIFICATE_VERIFY_FAILED` error that we recently encounter when querying the [SPARQL endpoint](https://dblp-kg.ltdemos.informatik.uni-hamburg.de/sparql).
+This is just a temporary solution. Please do not send sensitive information or adapt the code to query other servers.
 
 ----
 
@@ -45,6 +48,8 @@ A snapshot of our system answering the question *please enumerate other papers p
 ----
 
 ## Training from Scratch
+
+The following command can be used to train the model from scratch and evaluate it on the test set of the [DBLP-QuAD Challenge](https://codalab.lisn.upsaclay.fr/competitions/14264).
 
 ```shell
 # Preprocess the data
