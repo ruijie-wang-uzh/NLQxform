@@ -10,6 +10,7 @@ import time
 from pprint import pprint as pp
 import colorama
 from colorama import Fore, Style
+import ssl
 
 class Generator:
     def __init__(self, args):
@@ -201,6 +202,7 @@ if __name__ == "__main__":
     
     args = parser.parse_args()
 
+    ssl._create_default_https_context = ssl._create_unverified_context
     sparql = SPARQLWrapper(args.sparql_endpoint)
 
     directory = os.path.join(args.default_dir, args.resume_dir, args.resume_prefix)
