@@ -7,7 +7,6 @@ import numpy as np
 import os
 import time
 import re
-import ssl
 from SPARQLWrapper import SPARQLWrapper, JSON
 
 '''
@@ -87,8 +86,6 @@ if __name__ == "__main__":
                         help="default_dir", dest="default_dir")
     parser.add_argument("--resume_prefix", type=str)
     parser = parser.parse_args()
-
-    ssl._create_default_https_context = ssl._create_unverified_context
 
     sparql_endpoint = "https://dblp-kg.ltdemos.informatik.uni-hamburg.de/sparql"
     sparql = SPARQLWrapper(sparql_endpoint)

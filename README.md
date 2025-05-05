@@ -6,8 +6,8 @@ Ruijie Wang, Zhiruo Zhang, Luca Rossetto, Florian Ruosch, and Abraham Bernstein
 
 :boom: Based on NLQxform, we developed [NLQxform-UI](https://arxiv.org/abs/2403.08475) &mdash; an easy-to-use web-based interactive QA system over [DBLP Knowledge Graph](https://blog.dblp.org/tag/knowledge-graph/), which is also [open-sourced](https://github.com/ruijie-wang-uzh/NLQxform-UI).
 
-:exclamation: Please note that the SSL certificate verification is disabled in `do_query.py` and `generator_main.py` due to the `SSL: CERTIFICATE_VERIFY_FAILED` error that we recently encounter when querying the [SPARQL endpoint](https://dblp-kg.ltdemos.informatik.uni-hamburg.de/sparql).
-This is just a temporary solution. Please do not send sensitive information or adapt the code to query other servers.
+:exclamation: Please note that, in the previous versions, the SSL certificate verification was disabled in `do_query.py` and `generator_main.py` due to the `SSL: CERTIFICATE_VERIFY_FAILED` error that we encountered before when querying the [SPARQL endpoint](https://dblp-kg.ltdemos.informatik.uni-hamburg.de/sparql).
+We have removed this SSL error bypassing in the current version, as it is INSECURE and not necessary anymore.
 
 ----
 
